@@ -9,6 +9,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class SpringLibraryProjectApplication implements CommandLineRunner {
 
+	private	BookDAOBean bookDAOBean;
+
+	public SpringLibraryProjectApplication(BookDAOBean bookDAOBean) {
+		this.bookDAOBean = bookDAOBean;
+	}
+
 	public static void main(String[] args) {
 		SpringApplication.run(SpringLibraryProjectApplication.class, args);
 	}
