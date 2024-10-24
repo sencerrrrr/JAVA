@@ -20,5 +20,4 @@ public class SpringLibraryProjectApplication implements CommandLineRunner {
 		BookDAOBean bookDAOBean = new BookDAOBean(DBConnection.INSTANCE.getConnection());
 		bookDAOBean.findBookById(4);
 	}
-
 }
