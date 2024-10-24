@@ -10,7 +10,7 @@ public class BookDaoJDBC {
                 if (connection != null) {
                     System.out.println("Ура! Мы подключились к базе данных.");
                 } else {
-                    System.out.println("бд недоступна.");
+                    System.out.println("БД недоступна.");
                 }
 
                 // Запрос к базе данных
