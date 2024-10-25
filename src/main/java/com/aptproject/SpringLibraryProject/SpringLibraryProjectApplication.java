@@ -14,17 +14,12 @@ import java.util.List;
 
 @SpringBootApplication
 public class SpringLibraryProjectApplication implements CommandLineRunner {
-
-	private	BookDAOBean bookDAOBean;
-
-	public SpringLibraryProjectApplication(BookDAOBean bookDAOBean) {
-		this.bookDAOBean = bookDAOBean;
-	}
-
-	@Autowired
-	private NamedParameterJdbcTemplate jdbcTemplate;
-
-
+//	private	BookDAOBean bookDAOBean;
+//	public SpringLibraryProjectApplication(BookDAOBean bookDAOBean) {
+//		this.bookDAOBean = bookDAOBean;
+//	}
+//	@Autowired
+//	private NamedParameterJdbcTemplate jdbcTemplate;
 	public static void main(String[] args) {
 		SpringApplication.run(SpringLibraryProjectApplication.class, args);
 	}
@@ -32,16 +27,15 @@ public class SpringLibraryProjectApplication implements CommandLineRunner {
 	public void run(String... args) throws Exception{
 //		BookDaoJDBC bookDaoJDBC = new BookDaoJDBC();
 //		bookDaoJDBC.findBookById(1);
-
 //		BookDAOBean bookDAOBean = new BookDAOBean(DBConnection.INSTANCE.getConnection());
 //		bookDAOBean.findBookById(4);
-		List<Book> bookList = jdbcTemplate.query("select * from books",
-				((rs, rowNum) -> new Book(
-						rs.getInt("id"),
-						rs.getString("title"),
-						rs.getString("author"),
-						rs.getDate("date_added")
-				)));
-		bookList.forEach(System.out::println);
+//		List<Book> bookList = jdbcTemplate.query("select * from books",
+//				((rs, rowNum) -> new Book(
+//						rs.getInt("id"),
+//						rs.getString("title"),
+//						rs.getString("author"),
+//						rs.getDate("date_added")
+//				)));
+//		bookList.forEach(System.out::println);
 	}
 }
