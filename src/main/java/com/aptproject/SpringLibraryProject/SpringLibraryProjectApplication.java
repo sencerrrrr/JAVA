@@ -23,6 +23,10 @@ public class SpringLibraryProjectApplication implements CommandLineRunner {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringLibraryProjectApplication.class, args);
 	}
+
+	@Autowired
+	private NamedParameterJdbcTemplate namedParameterJdbcTemplate;
+
 	@Override
 	public void run(String... args) throws Exception{
 //		BookDaoJDBC bookDaoJDBC = new BookDaoJDBC();
