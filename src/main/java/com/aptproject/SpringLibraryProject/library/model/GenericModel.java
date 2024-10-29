@@ -3,6 +3,7 @@ package com.aptproject.SpringLibraryProject.library.model;
 import jakarta.persistence.*;
 import lombok.*;
 import java.time.LocalDate;
+import java.util.Collection;
 
 @Getter
 @Setter
@@ -32,5 +33,12 @@ public abstract class GenericModel {
 
     @Column(name = "is_deleted", columnDefinition = "boolean default false")
     private boolean isDeleted;
+
+    public void setCreatedWhen(LocalDate now) {
+    }
+
+    public void setId(Long id) {
+    }
+
 
 }
