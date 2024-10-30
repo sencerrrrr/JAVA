@@ -45,4 +45,7 @@ public abstract class GenericService<E extends GenericModel, D extends GenericDT
         repository.deleteById(id);
     }
 
+    public void delete(Long id) {
+
+    }
 }

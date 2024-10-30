@@ -55,12 +55,7 @@ public abstract class GenericController <E extends GenericModel, D extends Gener
     @Operation(description = "Удалить запись", method = "delete")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.DELETE)
     public void delete(@PathVariable(value = "id") Long id) {
-        service.deleted(id);///////////////////////////
-        //////////////////
-        ///
-
-        //должен быть delete?
-        //////
+        service.delete(id);
     }
 }
 
