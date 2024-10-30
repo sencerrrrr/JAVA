@@ -2,17 +2,13 @@ package com.aptproject.SpringLibraryProject.library.controller;
 
 import com.aptproject.SpringLibraryProject.library.dto.GenericDTO;
 import com.aptproject.SpringLibraryProject.library.model.GenericModel;
-import com.aptproject.SpringLibraryProject.library.repository.GenericRepository;
 import com.aptproject.SpringLibraryProject.library.service.GenericService;
 import io.swagger.v3.oas.annotations.Operation;
 import lombok.extern.slf4j.Slf4j;
-import org.slf4j.LoggerFactory;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import org.webjars.NotFoundException;
-import java.time.LocalDate;
 import java.util.List;
 
 @RestController
@@ -32,16 +28,6 @@ public abstract class GenericController <E extends GenericModel, D extends Gener
         return ResponseEntity
                 .status(HttpStatus.OK)
                 .body(service.getOne(id));
-    }
-
-    @Operation(description = "Получить все записи", method = "getAll")
-    @GetMapping(value = "/getAll",
-            method = RequestMethod.GET,
-            produces = MediaType.APPLICATION_JSON_VALUE) // сразу указали тп маппинга "get"
-    public ResponseEntity<List<D>> getAll() {
-        return ResponseEntity
-            .status(HttpStatus.OK)
-            .body(service.listAll());
     }
 
     @Operation(description = "Создать запись", method = "add")
