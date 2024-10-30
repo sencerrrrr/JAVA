@@ -16,4 +16,4 @@ values('Недоросль', 'Д. И. Фонвизин', now()),
 );
 
 
-select * from public.books
+select * from authors
