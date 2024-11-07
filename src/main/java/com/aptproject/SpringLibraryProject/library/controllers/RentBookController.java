@@ -1,9 +1,8 @@
-package com.aptproject.SpringLibraryProject.library.controller;
+package com.aptproject.SpringLibraryProject.library.controllers;
 
 
 import com.aptproject.SpringLibraryProject.library.dto.BookRentInfoDTO;
 import com.aptproject.SpringLibraryProject.library.model.BookRentInfo;
-import com.aptproject.SpringLibraryProject.library.repository.BookRentInfoRepository;
 import com.aptproject.SpringLibraryProject.library.service.BookRentInfoService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.RequestMapping;

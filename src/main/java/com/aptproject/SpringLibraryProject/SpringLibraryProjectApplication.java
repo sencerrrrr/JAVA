@@ -11,7 +11,7 @@ import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
 import java.awt.*;
 import java.util.List;
-
+//http://localhost:8080/swagger-ui/index.html
 @SpringBootApplication
 public class SpringLibraryProjectApplication implements CommandLineRunner {
 //	private	BookDAOBean bookDAOBean;

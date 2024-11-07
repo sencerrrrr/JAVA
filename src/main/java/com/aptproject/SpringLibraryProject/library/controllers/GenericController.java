@@ -1,4 +1,4 @@
-package com.aptproject.SpringLibraryProject.library.controller;
+package com.aptproject.SpringLibraryProject.library.controllers;
 
 import com.aptproject.SpringLibraryProject.library.dto.GenericDTO;
 import com.aptproject.SpringLibraryProject.library.model.GenericModel;
@@ -9,7 +9,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
-import java.util.List;
 
 @RestController
 @Slf4j //логгер в командной строке

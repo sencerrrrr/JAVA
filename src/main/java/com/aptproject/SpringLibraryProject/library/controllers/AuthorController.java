@@ -1,4 +1,4 @@
-package com.aptproject.SpringLibraryProject.library.controller;
+package com.aptproject.SpringLibraryProject.library.controllers;
 
 import com.aptproject.SpringLibraryProject.library.dto.AuthorDTO;
 import com.aptproject.SpringLibraryProject.library.model.Author;

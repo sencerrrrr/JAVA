@@ -1,8 +1,7 @@
-package com.aptproject.SpringLibraryProject.library.controller;
+package com.aptproject.SpringLibraryProject.library.controllers;
 
 import com.aptproject.SpringLibraryProject.library.dto.UserDTO;
 import com.aptproject.SpringLibraryProject.library.model.User;
-import com.aptproject.SpringLibraryProject.library.repository.UserRepository;
 import com.aptproject.SpringLibraryProject.library.service.UserService;
 import io.swagger.v3.oas.annotations.tags.Tag;
 import org.springframework.web.bind.annotation.RequestMapping;
