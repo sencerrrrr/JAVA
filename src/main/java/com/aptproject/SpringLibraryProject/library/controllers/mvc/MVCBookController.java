@@ -18,7 +18,6 @@ import java.util.List;
 @Controller
 @RequestMapping("/books")
 public class MVCBookController {
-
     private static final Logger log = LoggerFactory.getLogger(MVCBookController.class);
     private final BookService bookService;
 
@@ -34,12 +33,12 @@ public class MVCBookController {
     }
 
     @GetMapping("/add")
-    public String create() {
+    public  String create() {
         return "books/add-book";
     }
 
     @PostMapping("/add")
-    public String create(@ModelAttribute("bookForm") BookDTO newBook) {
+    public  String create(@ModelAttribute("bookForm") BookDTO newBook) {
         log.info(newBook.toString());
         bookService.create(newBook);
         return "redirect:/books";
