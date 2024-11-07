@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru" xmlns:layout="http://www.w3.org/1999/xhtml" xmlns:th="http://www.w3.org/1999/xhtml">
+<body>
+<div layout:fragment="content">
+    <form style="max-width: 50vw" method="POST" th:action="@{/books/add}" th:object="${bookForm}">
+
+        <div>
+            <label class="form-label" for="title">Название</label>
+            <input name="title" type="text" class="form-control" id="title"></input>
+        </div>
+        <div>
+            <label class="form-label" for="">Место хранения</label>
+            <input name="" type="text" class="form-control"></input>
+        </div>
+
+        <div>
+            <label class="form-label" for="amount">Количество</label>
+            <input name="amount" type="number" class="form-control" id="amount"></input>
+        </div>
+        <div>
+            <label class="form-label" for="description">Описание</label>
+            <input name="description" type="text" class="form-control" id="description"></input>
+        </div>
+        <div>
+            <label class="form-label" for="date">Дата издания</label>
+            <input name="publishDate" type="text" class="form-control" id="date"></input>
+        </div>
+        <div>
+            <label class="form-label" for="genre">Жанр</label>
+            <section class="form-select" name="genre" id="genre">
+                <option selected>Выберите жанр из списка:</option>
+                <option th:each="genre : ${T(com.aptproject.SpringLibraryProject.library.model.Genre).values()}"
+                        th:value="${genre}" th:text="${genre.getGenreTextDisplay()}"></option>
+            </section>
+        </div>
+        <button type="submit" class="btn btn-primary">Добавить</button>
+        <button type="button" class="btn btn-secondary" onclick="window.history.back()">Назад</button>
+    </form>
+</div>
+</body>
+</html>
